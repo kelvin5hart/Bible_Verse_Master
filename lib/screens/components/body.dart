@@ -33,6 +33,17 @@ class _BodyState extends State<Body> {
         width: double.infinity,
         child: Column(
           children: [
+            Container(
+              margin: EdgeInsets.symmetric(horizontal: 20),
+              child: Text(
+                'BIBLE VERSE MASTER',
+                style: TextStyle(
+                    fontSize: getProportionateScreenWidth(36),
+                    color: Colors.teal,
+                    fontWeight: FontWeight.bold),
+                textAlign: TextAlign.center,
+              ),
+            ),
             Expanded(
               flex: 3,
               child: PageView.builder(
@@ -65,13 +76,13 @@ class _BodyState extends State<Body> {
                     child: Text(
                       'Start',
                       style:
-                          TextStyle(fontSize: getProportionateScreenWidth(25)),
+                          TextStyle(fontSize: getProportionateScreenWidth(30)),
                     ),
                     style: TextButton.styleFrom(primary: Colors.teal),
                   ),
                   Spacer(),
-                  Image.asset('assets/images/KAHStudios.png', height: getProportionateScreenHeight(60),
-                    width: getProportionateScreenWidth(60),)
+                  Image.asset('assets/images/KAHStudios.png', height: getProportionateScreenHeight(100),
+                    width: getProportionateScreenWidth(100),)
                 ],
               ),
             )
@@ -81,11 +92,11 @@ class _BodyState extends State<Body> {
     );
   }
 
-  AnimatedContainer buildDot({int index}) {
+  AnimatedContainer buildDot({required int index}) {
     return AnimatedContainer(
       duration: Duration(milliseconds: 200),
       margin: EdgeInsets.only(right: 5),
-      height: 15,
+      height: 10,
       width: currentPage == index ? 25 : 15,
       decoration: BoxDecoration(
           color: currentPage == index ? Colors.teal : Colors.black38,

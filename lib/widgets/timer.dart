@@ -1,20 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:circular_countdown_timer/circular_countdown_timer.dart';
 
-
 class Timer extends StatelessWidget {
-  const Timer({
-    Key key,
-    @required int duration,
-    @required CountDownController controller,
-    Function onComplete,
-    Function shuffleOptions
-  }) : _duration = duration, _controller = controller, onComplete = onComplete, shuffleOptions = shuffleOptions, super(key: key);
+  const Timer(
+      {required int duration,
+      required CountDownController controller,
+      required VoidCallback onComplete,})
+      : _duration = duration,
+        _controller = controller,
+        onComplete = onComplete;
 
   final int _duration;
   final CountDownController _controller;
-  final Function onComplete;
-  final Function shuffleOptions;
+  final VoidCallback onComplete;
 
   @override
   Widget build(BuildContext context) {
@@ -26,18 +24,16 @@ class Timer extends StatelessWidget {
           width: 100,
           height: 100,
           duration: _duration,
-          fillColor: Colors.grey[300],
+          fillColor: Colors.grey,
           ringColor: Colors.teal,
           textStyle: TextStyle(
-              fontSize: 33.0,
-              color: Colors.white,
-              fontWeight: FontWeight.bold),
+              fontSize: 33.0, color: Colors.white, fontWeight: FontWeight.bold),
           isReverse: true,
           strokeWidth: 15.0,
           isTimerTextShown: true,
           controller: _controller,
           onComplete: onComplete,
-          onStart: shuffleOptions,
+
         ),
       ),
     );

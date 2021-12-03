@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 class BibleVerseText extends StatelessWidget {
   final List bibleVerse;
   final int counter;
-  BibleVerseText({this.bibleVerse, this.counter});
+  BibleVerseText({required this.bibleVerse, required this.counter});
+
+
 
   @override
   Widget build(BuildContext context) {

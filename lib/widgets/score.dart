@@ -3,13 +3,13 @@ import 'package:flutter/material.dart';
 class ScoreWidget extends StatelessWidget {
   final int score;
 
-  ScoreWidget({this.score});
+  ScoreWidget({required this.score});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-        height: 60,
-        margin: EdgeInsets.only(bottom: 50),
+        height: 50,
+        margin: EdgeInsets.only(bottom: 30),
         padding: EdgeInsets.only(right: 30, top: 10,),
         alignment: Alignment.centerRight,
         child: Text(

@@ -1,8 +1,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="kahstudios.ng.bible_verse_master">
+
+   <uses-permission android:name="android.permission.INTERNET"/>
    <application
-        android:label="bible_verse_master"
+        android:label="Bible Verse Master"
         android:icon="@mipmap/ic_launcher">
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-5904874307460907~6465262077"/>
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"
